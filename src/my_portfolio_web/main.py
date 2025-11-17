@@ -11,7 +11,7 @@ BASE_DIR = Path(__file__).parent.resolve()
 app.mount("/static", StaticFiles(directory=BASE_DIR / "static"), name="static")
 
 
-html_path = BASE_DIR/("static/index.html")
+html_path = BASE_DIR/"static/index.html"
 
 @app.get("/mr-ritzy/portfolio", response_class=HTMLResponse)
 async def portfolio():
