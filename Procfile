@@ -1,0 +1,1 @@
+web: uv run uvicorn my_portfolio_web.main:app --host 0.0.0.0 --port $PORT
