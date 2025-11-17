@@ -13,7 +13,7 @@ dependencies = [
 ]
 
 [project.scripts]
-my-portfolio-web = "my_portfolio_web:main"
+app = "src.my_portfolio_web.main:app"
 
 [build-system]
 requires = ["uv_build>=0.9.9,<0.10.0"]
