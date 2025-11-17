@@ -1,9 +1,18 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', Arial, sans-serif;
     background: #0d1117;
-    color: #e6edf3;
+    color: #e6eef8;
+    line-height: 1.6;
+}
+
+a {
+    color: #7c9cff;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
 }
 
 .header {
@@ -13,67 +22,85 @@ body {
     border-bottom: 1px solid #30363d;
 }
 
+.profile-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.profile-image {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    border: 3px solid #30363d;
+    box-shadow: 0 0 20px rgba(124,156,255,0.4);
+    transition: transform 0.3s ease;
+}
+.profile-image:hover {
+    transform: scale(1.05);
+}
+
 .title {
-    font-size: 2.5rem;
-    margin: 0;
-    font-weight: bold;
+    font-size: 2.2rem;
+    margin: 0.5rem 0;
 }
 
 .subtitle {
     font-size: 1.1rem;
-    opacity: 0.8;
+    max-width: 700px;
+    margin: auto;
+    color: #9aa4b2;
 }
 
 .section {
     padding: 2.5rem 1.5rem;
-    max-width: 800px;
+    max-width: 900px;
     margin: auto;
 }
 
-.skill-list {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.7rem;
+.section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid #7c9cff;
+    padding-left: 0.5rem;
 }
 
-.skill-list li {
-    background: #21262d;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    border: 1px solid #30363d;
+ul {
+    padding-left: 1.2rem;
 }
 
-.project {
+li {
+    margin-bottom: 0.6rem;
+}
+
+.project-list li {
     background: #161b22;
-    padding: 1.5rem;
-    margin-top: 1rem;
-    border-radius: 8px;
     border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 0.8rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-list li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(124,156,255,0.3);
 }
 
 .footer {
     text-align: center;
-    padding: 1.5rem;
+    padding: 2rem 1rem;
     border-top: 1px solid #30363d;
-    margin-top: 2rem;
-    background: #161b22;
+    margin-top: 3rem;
+    color: #9aa4b2;
 }
 
-.profile-container {
-display: flex;
-justify-content: center;
-margin-bottom: 1.5rem;
-}
-
-
-.profile-image {
-    width: 300px;
-    height: 300px;
-    border-radius: 70%;
-    object-fit: cover;
-    object-position: top;  
-    border: 3px solid #30363d;
-    box-shadow: 0 0 12px rgba(0,0,0,0.4);
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.8rem;
+    }
+    .subtitle {
+        font-size: 1rem;
+    }
 }
